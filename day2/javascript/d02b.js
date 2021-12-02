@@ -4,7 +4,7 @@ const readline = require('readline')
 const fileLines = []
 
 const fileInterface = readline.createInterface({
-    input: fs.createReadStream('./inputs/d02.txt')
+    input: fs.createReadStream('../../inputs/d02.txt')
 })
 
 fileInterface.on('line', line => {

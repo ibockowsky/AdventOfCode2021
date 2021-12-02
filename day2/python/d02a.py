@@ -1,4 +1,4 @@
-with open('./inputs/d02.txt', 'r') as file:
+with open('../../inputs/d02.txt', 'r') as file:
     data = [line.split(" ") for line in file.readlines()]
 
 
