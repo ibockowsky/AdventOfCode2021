@@ -21,20 +21,14 @@ const findBit = (toFind = 'most') => {
         let oneCount = 0
 
         recordsMost.forEach(record => {
-            record[i] === '0' ? zeroCount++ : oneCount++
+            +record[i] === 0 ? zeroCount++ : oneCount++
         })
 
         const filter = toFind === 'most'
             ? oneCount >= zeroCount ? 1 : 0
             : oneCount >= zeroCount ? 0 : 1
 
-        recordsMost.filter(record => {
-            if (+record[i] === filter) return record
-        })
-
-        recordsMost = recordsMost.filter(record => {
-            if (+record[i] === filter) return record
-        })
+        recordsMost = recordsMost.filter(record => +record[i] === filter)
         i++
     }
 
